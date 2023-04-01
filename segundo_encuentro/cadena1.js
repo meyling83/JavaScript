@@ -1,10 +1,15 @@
 //var cadena="Feliz"
 //var cadena1="cumpleaños"
+//concatenar
 //document.write(cadena.concat(cadena1));
+//docuemnt.write(cadena + cadena1);
 
+//subcadenas
 //var cadena2="abcdefghijklmabcdefghijklm";
 //document.write(cadena2.substring(20));
 //document.write(cadena2.substring(3,6));
+
+//indices
 
 //document.write(cadena2.indexOf("c"));
 //document.write(cadena2.lastIndexOf("a"));
@@ -17,19 +22,60 @@
 //document.write("el ultimo def se encuentra en la posicion " + cadena2.lastIndexOf("def"));
 //document.write("el ultimo hola se encuentra en la posicion " + cadena2.lastIndexOf("hola"));
 
+//split
 var cadena5="hola a todos";
 //document.write("La longitud es " + cadena5.length);
 //var array=cadena5.split(" ");
 //var array1=cadena5.split("");
 //document.write(array1);
-var cantidad=0;
-for (let i=0;i<cadena5.length;i++)
+
+//recorriendo la cadena
+//var cantidad=0;
+//for (let i=0;i<cadena5.length;i++)
+//{
+	//let c=cadena5[i].toLowerCase();
+	//if(c=="a" || c=="e" || c=="i" || c=="o" || c=="u")
+	//{
+		//cantidad++;
+	//}
+
+//}
+//document.write(cantidad);
+
+//otra via uso del switch
+
+var cantidadA=0;
+var cantidadE=0;
+var cantidadI=0;
+var cantidadO=0;
+var cantidadU=0;
+for(let i=0;i<cadena5.length;i++)
 {
-	let c=cadena5[i];
-	if(c=="a" || c=="e" || c=="i" || c=="o" || c=="u")
+	let c=cadena5[i].toLowerCase();
+	switch (c)
 	{
-		cantidad++;
+	case "a":
+		cantidadA++;
+		break;
+		
+	case "e":
+		cantidadE++;
+		break;
+		
+	case "i":
+		cantidadI++;
+		break;
+
+	case "o":
+		cantidadO++;
+		break;
+		
+	case "u":
+		cantidadU++;
+			break;
+
+
 	}
 
 }
-document.write(cantidad);
+document.write(cantidadA,cantidadE,cantidadI,cantidadO,cantidadU);
