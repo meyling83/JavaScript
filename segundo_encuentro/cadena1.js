@@ -23,7 +23,7 @@
 //document.write("el ultimo hola se encuentra en la posicion " + cadena2.lastIndexOf("hola"));
 
 //split
-var cadena5="hola a todos";
+var cadena5=prompt("Introduzca una cadena");
 //document.write("La longitud es " + cadena5.length);
 //var array=cadena5.split(" ");
 //var array1=cadena5.split("");
@@ -51,6 +51,8 @@ var cantidadO=0;
 var cantidadU=0;
 for(let i=0;i<cadena5.length;i++)
 {
+	//otra forma de acceder al caracter en la posicion i
+	//let c=cadena5.charAt(i).toLowerCase();
 	let c=cadena5[i].toLowerCase();
 	switch (c)
 	{
