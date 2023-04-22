@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Métodos map, find</title>
+</head>
+<body>
+  <script type="text/javascript">
+    const trabajadores=[
+      {nombre:"Ane", sueldo:2500,edad:32},
+      {nombre:"Luis", sueldo:3500,edad:36},
+      {nombre:"Paula", sueldo:3200,edad:32}
+    ];
+
+  /*********************************************************
+  /* 1.- Recorrer los elementos del aray
+  */
+    //for(let i=0;i<trabajadores.length;i++)
+    //{
+     // let trabajador=trabajadores[i];
+      //document.write("Nombre:" + trabajador.nombre);
+     // document.write("<br>");
+      //document.write("Sueldo:" + trabajador.sueldo);
+     // document.write("<br>");
+     // document.write("Edad:"+ trabajador.edad);
+     // document.write("<br>");
+     // document.write("------------------------------------------------------------");
+     // document.write("<br>");
+    //}
+  
+  
+  /*********************************************************
+  /* 2.- Otra forma de recorrer los eltos del array
+  /********************************************************/
+ // for(let trabajador of trabajadores)
+  //{
+     // document.write("Nombre:" + trabajador.nombre);
+      //document.write("<br>");
+     // document.write("Sueldo:" + trabajador.sueldo);
+     // document.write("<br>");
+     // document.write("Edad:"+ trabajador.edad);
+     // document.write("<br>");
+     // document.write("------------------------------------------------------------");
+     // document.write("<br>");
+
+  //}
+  
+    
+  //*********************************************************
+  /* Filter -->queremos los empleados que ganen más de 3000
+  /********************************************************/
+ 
+   //let trabajadoresAux=trabajadores.filter(t=>t.sueldo>3000);
+   let trabajadoresAux=trabajadores.filter(function(t){return t.sueldo>3000});
+   for (let trabajador of trabajadoresAux)
+   {
+      document.write("Nombre:" + trabajador.nombre);
+      document.write("<br>");
+      document.write("Sueldo:" + trabajador.sueldo);
+      document.write("<br>");
+      document.write("Edad:"+ trabajador.edad);
+      document.write("<br>");
+      document.write("------------------------------------------------------------");
+      document.write("<br>");
+   }
+   document.write(Json.stringify(trabajador));
+ 
+   
+  //*********************************************************
+  /* Map -->queremos convertir a mayúsculas nombre trabajador
+  /********************************************************/
+   // let nombrMayuscula=trabajadores.map(t=>t.nombre.toUpperCase());
+
+    //for(let i=0;i<nombrMayuscula.length;i++)
+   // {
+      //let trabajador=nombrMayuscula[i];
+      //document.write(trabajador);
+      //document.write("<br>");
+      
+   // }
+ 
+
+  //********************************************************
+  /* find -->buscar a Luis
+  /********************************************************/
+  //let luis=trabajadores.find(t=>t.nombre=="Luis");
+  //document.write(luis.nombre);
+ // document.write("<br>");
+ // document.write(luis.sueldo);
+  //document.write("<br>");
+ // document.write(luis.edad);
+ // document.write("<br>");
+
+  
+  //********************************************************
+  /* reduce -->sumar los elementos del array números
+  /********************************************************/
+  
+ 
+  //********************************************************
+  /* reduce -->calcular la suma total de los sueldos
+  /********************************************************/
+  //let suma=trabajadores.reduce(function(suma,t.sueldo){return suma+t.sueldo});
+ // document.write(suma);
+  
+
+ 
+
+  
+  </script>
+  
+</body>
+</html>

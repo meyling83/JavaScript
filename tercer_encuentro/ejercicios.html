@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    const estudiantes = [
+  {nombre: "Ane", apellido: "Arruti", edad: 24, curso: "Marketing" },
+  {nombre: "Jon", apellido: "Zabala", edad: 22, curso: "Informática" },
+  {nombre: "María", apellido: "Doe", edad: 20,curso: "Contabilidad" },
+  {nombre: "Victor", apellido: "Gómez", edad: 23, curso: "Informática" }
+  ];
+
+   /*---------------------------------------------------------------------------
+    Se pide: Crear otro array (nombrecompleto) que contenga el nombre completo
+    nombre + apellido de cada estudiante 
+   ---------------------------------------------------------------------------*/
+    //let nombreCompleto=estudiantes.map(function(p){return p.nombre + " " + p.apellido});
+    //document.write(nombreCompleto);
+
+   /*---------------------------------------------------------------------------
+    Usando el array estudiantes, se pide buscar y devolver los datos de la 
+    estudiante María
+   ---------------------------------------------------------------------------*/
+   //let maria=estudiantes.find(e=>e.nombre=="María")
+    //si quiero usar funcion anonima en lugar de funcion flecha
+   // let maria1=estudiantes.find(function(n){return n.nombre=="María"});
+   //document.write("Nombre:" + maria.nombre);
+   //document.write("<br>");
+   //document.write("Apellido:" + maria.apellido);
+   //document.write("<br>");
+  // document.write("Edad:" + maria.edad);
+   //document.write("<br>");
+  // document.write("Curso:" + maria.curso);
+    
+
+
+
+   
+  /*---------------------------------------------------------------------------
+  /* Filtrar todos los alumnos que sean de Informática
+   ------------------------------------------------------------------------*/
+    //let informatica=estudiantes.filter(e=>e.curso=="Informática");
+    //for(let e of informatica)
+    //{
+      //document.write(e.nombre  + " " + e.apellido);
+      //document.write("</br>");
+
+    //}
+  
+
+/*---------------------------------------------------------------------------
+ Queremos saber si existen estudiantes >25 (some)
+---------------------------------------------------------------------------*/
+ //let existe=estudiantes.some(e=>e.edad>25);
+ //document.write(existe);
+  
+/*---------------------------------------------------------------------------
+ Queremos saber si todos estudiantes edad =20 (every)
+/*---------------------------------------------------------------------------*/
+//let todos=estudiantes.every(e=>e.edad==20);
+//document.write(todos);
+  
+  
+  </script> 
+
+</body>
+</html>

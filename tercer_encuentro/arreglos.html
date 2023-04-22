@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Objetos nativos. String</title>
+	</head>
+
+	<body>
+		<script>
+		//declaracion arrays
+		//const numeros=[1,2,3,4,5];
+		//otra forma de declartar arreglos, crea un arreglo vacio
+		//const numeros2=new Array();
+		//tambien crea arreglo vacio
+		//const numeros3=[];
+		//acceder a un elemento del arreglo por el indice
+		//console.log(numeros[1]);
+		//añade un elemento al final
+		//numeros.push(6);
+		//añade un elemento al inicio
+		//numeros.unshift(0);
+		//borrar ultimo pop()
+		//numeros.pop()
+		//borrar primero shift()
+		//numeros.shift()
+		//elimina el elemento que ocupa la posicion 4, y deja es posicion en el arrego vacio
+		//delete numeros[4];
+		//elimina a partir de la posicion 0 un elemento
+		//numeros.splice(0,1);
+		//concatenar
+		//const numeros4=numeros.concat(7,8,9);
+		//añade a partir de la posicion 0 5,5
+		//numeros.splice(0,0,5,5);
+		//obtiene un nuevo arregol, con una parte del original, , no modifica el original
+		//resultado=numeros.slice(0,2);
+		//ordenar
+		//const num=[25,103,13];
+		//ordena el arreglo alfabeticamente, devuelve 103,13,25
+		//const ordenado=num.sort();
+		//si quiero ordenarlo numericamente ascendentemente, uso un afuncion como parametro del sort, que devuelve la resta de los numeros
+		//const ordenado1=num.sort(function(a,b){return a-b})
+		//si quiero ordenarlo numericamente descendentemente, uso un afuncion como parametro del sort, que devuelve la resta de los numeros, invertido, ultimo menos primero
+		//const ordenado2=num.sort(function(a,b){return b-a})
+		//recorrer elementos del array
+		//for(let i=0;i<numeros.length;i++)
+		//{
+			//console.log(numeros[i]);
+		//}
+		//for (let e of numeros)
+		//{
+			//console.log(e);
+		//}
+		//recorre el arreglo y para cada elemento aplica una funcion, se le pasa como argumento una variable que es el elemento del arreglo y dentro d ela funcion hago lo que quiera con ese elemento
+		//numeros.forEach(function(n){console.log(n)})
+		//ejercicio 1
+		
+			//let numeros=[];
+			//para que coja solo los pares, incremento la variable en 2 y empiezo en 2
+			//for(let i=2;i<=20;i+=2)
+			//{
+				//numeros.push(i);
+				
+			//}
+			//document.write(numeros);
+		//ejercicio 2
+			//const array=[1,2,3,4,5,6,7,8,9,10];
+			//let suma=0;
+			//let media=0;
+			//for(let e of array)
+			//{
+				//suma+=e;
+			//}
+			//media=suma/array.length;
+			//document.write(suma);
+			//document.write(media);
+		//ejercicio 3
+			//let array=[23,44,66,77,88,99];
+			//let ordenAsc=array.sort(function(a,b){return (a-b)});
+			//let menor=ordenAsc[0];
+			//let mayor=ordenAsc[ordenAsc.length-1]
+			//document.write(menor);
+			//document.write(mayor);
+			//otra via usando la funcion Math.min y Math.max
+			//a esas funciones si le paso el arreglo da error, tengo que utilizar un operador que pasa los valores del arreglo como numericos ...
+			//let array=[23,44,66,77,88,99];
+			//document.write(Math.min(...array));
+			//document.write(Math.max(...array));
+
+		//ejercicio 4
+			//var array=[];
+			//var suma=0;
+			//for(let i=0;i<5;i++)
+			//{
+				//let aleatorio=Math.ceil(Math.random()*10);
+				//array.push(aleatorio);
+				//suma+=aleatorio;
+			//}
+			//document.write(array);
+			//document.write(suma/array.length);
+		//ejercicio 5
+			//let array=[];
+			//let suma=0;
+			//let media=0;
+			//for(let i=0;i<10;i++)
+			//{
+				//let e=Number(prompt("Entre un numero"));
+				//array.push(e);
+				//if(i%2==0)
+				//{
+					//suma+=i;
+				//}
+			//}
+			//media=suma/array.length;
+			//document.write(array);
+			//document.write(media);
+		//ejercicio 6
+			//let array=[];
+			//let sumaNeg=0;
+			//let sumaPos=0;
+			//let contadorPos=0;
+			//let contadorNeg=0;
+			//let mediaNeg=0;
+			//let mediaPos=0;
+			//for(let i=0;i<10;i++)
+			//{
+				//let elemento=Number(prompt("Entre un numero"));
+				//array.push(elemento);
+			//}
+			//document.write(array);
+			//for(let e of array)
+			//{
+				//if(e>=0)
+				//{
+					//sumaPos+=e;
+					//contadorPos++;
+				//}
+				//else
+				//{
+					//sumaNeg+=e;
+					//contadorNeg++;
+				//}
+			//}
+			//document.write("<br>");
+			//mediaPos=sumaPos/contadorPos;
+			//mediaNeg=sumaNeg/contadorNeg;
+
+			//document.write(mediaPos);
+			//document.write("<br>");
+			//document.write(mediaNeg);
+			//uso de map. funcion a aplicar a cada elemento del arreglo, se le pasa como parametro una funcion que retorna lo que quiero hacer con elemento dle arreglo
+			const numeros=[1,5,10];
+			//devuelve un nuevo arreglo que duplica cada elemento del original
+			//let dobles=numeros.map(function(n){return n*2});
+			//otra via, usando funcion flecha
+			//let dobles1=numeros.map(n=>n*2);
+			//uso del filter. Se le pasa como parametro una funcion anonima en la que pongo la condicion del filtro, devuelve todos los que cumplan la condicion
+			//let aux=numeros.filter(function(n){return n>3});
+			//otra via
+			//let aux=numeros.filter(n=>n>3);
+			//find, encontrar el primer elemento que cumpla con la condicion
+			//let primero=numeros.find(function(n){return n>3});
+			//let primero1=numeros.find(n=>n>3);
+			//every: devuelve verdadero si todos los elementos del arreglo cumplen la condicion, falso en caso contrario
+			//let respuesta=numeros.every(function(n){n>3})
+			//let respuesta1=numeros.every(n=>n>3)
+			//some, devuelve verdadero si alguno cumple con la condicion, falso en caso contrario
+			//let respuesta=numeros.some(function(n){return n>3});
+			//let respuesta1=numeros.some(n=>n>3);
+			//reduce se usa para recorrer los elementos del arreglo y sumarlos por ejemplo. le paso a la funcion anonima dos parametros, la variable en la que acumulo y la que coge cada elemento del arreglo
+			//let total=numeros.reduce(function(total,n){return total+n})
+			
+	</script>
+	</body>
+</html>
