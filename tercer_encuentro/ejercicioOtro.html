@@ -48,27 +48,28 @@
   
     
   //*********************************************************
-  /* Filter -->queremos los empleados que ganen más de 3000
+  /* Filter queremos los empleados que ganen más de 3000
   /********************************************************/
  
    //let trabajadoresAux=trabajadores.filter(t=>t.sueldo>3000);
-   let trabajadoresAux=trabajadores.filter(function(t){return t.sueldo>3000});
-   for (let trabajador of trabajadoresAux)
-   {
-      document.write("Nombre:" + trabajador.nombre);
-      document.write("<br>");
-      document.write("Sueldo:" + trabajador.sueldo);
-      document.write("<br>");
-      document.write("Edad:"+ trabajador.edad);
-      document.write("<br>");
-      document.write("------------------------------------------------------------");
-      document.write("<br>");
-   }
-   document.write(Json.stringify(trabajador));
+   //let trabajadoresAux=trabajadores.filter(function(t){return t.sueldo>3000});
+   //for (let trabajador of trabajadoresAux)
+   //{
+      //document.write("Nombre:" + trabajador.nombre);
+     // document.write("<br>");
+     // document.write("Sueldo:" + trabajador.sueldo);
+      //document.write("<br>");
+      //document.write("Edad:"+ trabajador.edad);
+     // document.write("<br>");
+     // document.write("------------------------------------------------------------");
+      //document.write("<br>");
+      
+   //}
+   
  
    
   //*********************************************************
-  /* Map -->queremos convertir a mayúsculas nombre trabajador
+  /* Map queremos convertir a mayúsculas nombre trabajador
   /********************************************************/
    // let nombrMayuscula=trabajadores.map(t=>t.nombre.toUpperCase());
 
@@ -82,7 +83,7 @@
  
 
   //********************************************************
-  /* find -->buscar a Luis
+  /* find buscar a Luis
   /********************************************************/
   //let luis=trabajadores.find(t=>t.nombre=="Luis");
   //document.write(luis.nombre);
@@ -94,15 +95,17 @@
 
   
   //********************************************************
-  /* reduce -->sumar los elementos del array números
+  /* reduce sumar los elementos del array números
   /********************************************************/
-  
+  //const numeros=[1,5,10];
+  //let suma=numeros.reduce(function(suma,n){return suma+n;});
+  //document.write(suma);
  
   //********************************************************
-  /* reduce -->calcular la suma total de los sueldos
+  /* reduce calcular la suma total de los sueldos
   /********************************************************/
-  //let suma=trabajadores.reduce(function(suma,t.sueldo){return suma+t.sueldo});
- // document.write(suma);
+ let suma=trabajadores.reduce(function(suma,t){return suma+t.sueldo});
+ document.write(suma);
   
 
  
