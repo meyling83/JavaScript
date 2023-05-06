@@ -147,7 +147,7 @@
 			//document.write("<br>");
 			//document.write(mediaNeg);
 			//uso de map. funcion a aplicar a cada elemento del arreglo, se le pasa como parametro una funcion que retorna lo que quiero hacer con elemento dle arreglo
-			const numeros=[1,5,10];
+			//const numeros=[1,5,10];
 			//devuelve un nuevo arreglo que duplica cada elemento del original
 			//let dobles=numeros.map(function(n){return n*2});
 			//otra via, usando funcion flecha
@@ -167,7 +167,13 @@
 			//let respuesta1=numeros.some(n=>n>3);
 			//reduce se usa para recorrer los elementos del arreglo y sumarlos por ejemplo. le paso a la funcion anonima dos parametros, la variable en la que acumulo y la que coge cada elemento del arreglo
 			//let total=numeros.reduce(function(total,n){return total+n})
-			
+			//factorial
+			var numero=Number(prompt("Entre un numero"));
+			var factorial=1;
+			for(let i=numero;i>1;i--){
+				factorial=factorial*i;
+			}
+			document.write(factorial);
 	</script>
 	</body>
 </html>
