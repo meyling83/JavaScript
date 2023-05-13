@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pruebas tiempo javascript</h1>
+    <h1 id="parrafo"></h1>
+    <hr>
+    <button onclick="tiempo()">Mostrar Saludo</button>
+    <script>
+        //al dar clic en el boton se llama a la funcion tiempo
+        function tiempo(){
+            //setTimeout ejecuta la funcion saludo al pasar 3 segundos,
+            // luego al dar clic al boton, pasados 3 segundos ejecuta la funcion saludo
+            //en la funcion saludo muestro en un alert hola en un primer ejemplo
+            //en otro ejemplo lo muestro en la etiqueta h1 cuyo id es parrafo
+            setTimeout(saludo,3000);
+        }
+        function saludo(){
+            //para el primer ejemplo muestro una alerta
+            //alert("Hola");
+            //luego en otro ejemplo obtengo el elemento del html cuyo id es parrafo, este es el h1
+            let texto=document.getElementById("parrafo");
+            //escribo en el h1 hola y lo pongo de color verde
+            texto.textContent="Hola";
+            texto.style.color="green";
+        }
+    </script>
+</body>
+</html>

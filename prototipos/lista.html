@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Añadir elementos a una lista</h2>
+    <ul id="lista">
+        <li>Elemento1</li>
+    </ul>
+    <script>
+        //crear elementos de la lista dinamicamente
+        let elementos=["Elemento2","Elemento3"];
+        //obtener la lista
+        const lista=document.getElementById("lista");
+        for (let elemento of elementos){
+            //crear elementos de la lista
+            let e=document.createElement("li");
+            e.textContent=elemento;
+            lista.appendChild(e);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let Perro={nombre:"Laika"};
+        //let perro1=Object.create(Perro);
+        //crear metodo saludo
+        //Perro.prototype.saludo=function(){
+           // console.log("Me llamo " + this.nombre);
+        //} 
+        
+        //Ejercicio 5
+       /*  function Videojuego(nombre,empresa,año){
+            this.nombre=nombre;
+            this.empresa=empresa;
+            this.año=año;
+        }
+        let videojuego1=new Videojuego('Mario Bros','Nintendo',1983);
+        //si no pongo protoype, como que el metodo lo cree despues de crear e objeto perro1, perro1.play daria error
+        Videojuego.prototype.play=function(){
+            console.log(this.nombre + " ha sido iniciado");
+        } */
+        //Ejercicio 6
+       /*  function Cancion(nombre,autor,año){
+            this.nombre=nombre;
+            this.autor=autor;
+            this.año=año;
+        }
+        let cancion1=new Cancion("Eso que tu me das","Jarabe de Palo",2020);
+        Cancion.prototype.stop=function(){
+            console.log(this.nombre + " en apusa");
+        } */
+        //Ejercicio 1
+        //elprototipo de auto es object
+        /* let auto={marca:"Ford",model:"Focus"};
+        let auto1=Object.create(auto);
+        //el prototipo de auto1 es auto
+        console.log(auto1.__proto__); */
+
+        //Ejercicio2
+        //el prototipo de estudiante es object
+        /* let estudiante={nombre:"Paul",apellido:"McCartney",codigo:66992};
+        //el prototipo de estudiante1 es estudiante
+        estudiante1=Object.create(estudiante);
+        console.log(estudiante1.__proto__); */
+        //ejercicio 3
+        /* function Empleado(nombre,antiguedad,sueldo){
+            this.nombre=nombre;
+            this.antiguedad=antiguedad;
+            this.sueldo=sueldo;
+
+        }
+        //el prototipo de empleado 1 es object
+        let empleado1=new Empleado("maria",10,100);
+        //el prototipo de empleado2 es empleado
+        let empleado2=Object.create(empleado1); 
+        console.log(empleado1.__proto__);
+        console.log(empleado2.__proto__); */
+
+        //ejercicio 4
+        function Restaurante(nombre,direccion,ciudad){
+            this.nombre=nombre;
+            this.direccion=direccion;
+            this.ciudad=ciudad;
+
+        }
+        let restaurante1=new Restaurante("Mi restaurante","Mi direccion","Paris");
+        let restaurante2=Object.create(restaurante1);
+        //el prototipo de restaurante1 es object
+        //el prototipo de restaurante2 es restaurante1
+        console.log(restaurante1.__proto__);
+        console.log(restaurante2.__proto__);
+    </script>
+</body>
+</html>

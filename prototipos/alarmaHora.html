@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body onload="reloj()">
+    <input type="number"  id="txtTiempo" min="0">
+    <button onclick="tiempo()">Alarma</button>
+    <br>
+    <h1 id="parrafo">00:00:00</h1>
+    <audio id="audioAlarma">
+        <source src="Audios/alarma.mp3" type="audio/mp3">
+        Sonido no habilitado
+    </audio>
+   
+    <script>
+        //obtengo los segundos que teclearon en el txt, para usarlos en la funcion tiempo
+        let segundos=document.getElementById("txtTiempo");
+        //obtengo el elemento cuyo id es parrafo, es el texto que cambiare en la funcion alarma
+        let texto=document.getElementById("parrafo");
+        //obtengo el sonido que esta en la etiqueta audio cuyo id es audioAlarma
+        let sonido=document.getElementById("audioAlarma");
+        function reloj(){
+            //el setInterval ejecuta la funcion hora cada segundo.
+            //en la funcion hora obtengo la hora, minutos y segundos actuales
+            //como esta funcion se ejecuta cada segundo, se actualiza el texto que muestra la hora
+            //mostrando la hora, minutos y segundos, o sea un reloj 
+            setInterval(hora,1000);
+        }
+        function hora(){
+            //obtengo la fecha actual, y de la fecha actual obtengo las horas, minutos y segundos
+            let t=new Date();
+            //el padStart es para que si tiene un solo lugar salga un 0 delante y lo de con 2 digitos, tengo que convertirlo antes a string
+            let h=String(t.getHours()).padStart(2,"0");
+            let m=String(t.getMinutes()).padStart(2,"0");
+            let s=String(t.getSeconds()).padStart(2,"0");
+            //concatenamos lo anterior
+            let textoHora=h+ ":" + m + ":" + s;
+            texto.textContent=textoHora;
+        }
+        //esta funcion llama a la funcion alarma, pasados los segundos que teclearon en el txt
+        function tiempo(){
+            //el setTimeout se ejecuta solo una vez, pasados los segundos que se indican en el parametro
+            //ojo, el .value tiene que ponerse aqui, pues solo se actualiza su valor al hacer clic en el boton, no antes
+          setTimeout(alarma,segundos.value*1000);
+        }
+        //cambia el texto que habia obtenido antes en la variable texto y reproduce el sonido de la etiqueta audio
+        function alarma(){
+            texto.textContent="ENCENDIDO";
+            texto.style.color="green";
+            //para reproducir el sonido de la etiqueta audio que obtuve antes
+            sonido.play();
+        }
+    </script>
+</body>
+</html>
