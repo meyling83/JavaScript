@@ -1,0 +1,13 @@
+{
+    "nombre": "Ane Arruti",
+    "edad": 35,
+    "esEstudiante": false,
+    "direccion": {
+        "calle": "Av. Libertad 22",
+        "ciudad": "Donostia"
+    },
+    "telefonos": [
+        "555-555-5555",
+        "555-555-5556"
+    ]
+}

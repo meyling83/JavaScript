@@ -1,0 +1,9 @@
+{
+    "nombre":"collegium",
+    "direccion":{
+        "calle":"calle publica 126",
+        "ciudad":"sidney"
+    },
+    "cantEstudiantes":3,
+    "estudiantes":["Pedro picapiedra","pablo marmol","vilma picapiedra"]
+}
