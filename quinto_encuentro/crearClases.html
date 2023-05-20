@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Estudiante{
+            //variable privada #
+            #llave;
+            constructor(nombre,edad){
+                //por convencion pongo _ a los atributos indicando que son privados, pero en realidad no lo son, simpre puedo acceder a ellos
+                this._nombre=nombre;
+                this._edad=edad;
+            }
+            //propiedad para leer el atributo supuestamente privado
+            get nombre(){
+                return this._nombre;
+            }
+             //propiedad para escribir el atributo supuestamente privado
+            set nombre(nuevoValor){
+                this._nombre=nuevoValor;
+            }
+            //metodo
+            codigo(){
+                return Math.floor(Math.random()*10+1)*this.#llave;
+            }
+        }
+        //herencia Subclases
+        class EstudianteParcial extends Estudiante{
+            constructor(nombre,edad,curso){
+                super (nombre,edad)
+                this._curso=curso;
+            }
+            get curso(){
+                return this._curso;
+            }
+            set curso(nuevo){
+                this._curso=nuevo;
+            }
+
+        }
+        let e1=new Estudiante("Maria",21);
+        let e2=new Estudiante("Luis",60);
+        let e3=new EstudianteParcial("Parcial",50,"matematica");
+        //otra forma de definir la clases seria usando expresiones de clases
+        //que pueden ser nombradas o anonimas
+        //Esta es anonima
+        let Rectangulo=class{
+            constructor(alto,ancho){
+                this._alto=alto;
+                this._ancho=ancho;
+            }
+        }
+        console.log(Rectangulo.name);
+        //esta es nombrada, he especificado el nombre de la clase
+        let Rectangulo1=class{ Rectangulo2
+            constructor(alto,ancho){
+                this._alto=alto;
+                this._ancho=ancho;
+            }
+        }
+        console.log(Rectangulo1.name);
+    </script>
+</body>
+</html>
