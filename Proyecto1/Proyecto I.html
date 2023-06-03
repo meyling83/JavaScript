@@ -2,6 +2,7 @@
     <head>
         <title>Responde Rápido</title>
         <link rel="stylesheet" href="misEstilos.css">
+        <script defer type="text/javascript" src="miscript.js"></script>
     </head>
     <body onload="comenzarCuentaAtras()">
         <h2>Responde a las preguntas lo mas rápido que puedas <span id="cuentaAtras"></span></h2>
@@ -18,13 +19,13 @@
         <br><br>
         <button onclick="finalizado()" >Fin</button>
         <br><br>
-        <button onclick="volverAJugar">Volver a jugar</button>
+        <button onclick="volverAJugar()">Volver a jugar</button>
 
         <audio id="audioFinal">
             <source src="gameover.mp3"  type="audio/mp3"> 
             Sonido no habilitado
         </audio>
 
-        <script type="text/javascript" src="miscript.js"></script>
+        
     </body>
 </html>

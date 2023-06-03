@@ -1,37 +1,36 @@
 let cuentaAtras=document.getElementById("cuentaAtras");
 var contador=30;
+var  myTimeout =0;
+var myInterval =0;
 function comenzarCuentaAtras(){
-    
-    setInterval(segundo,1000);
-    //si no he dado clic en finalizado********como lo hago
+    myInterval=setInterval(segundo,1000);
     
 }
 
 function segundo(){
-    contador--;
+   contador--;
    let texto=document.getElementById("cuentaAtras");
    texto.textContent=contador;
-   if(contador==0)
-        setTimeout(tiempoFinalizado,30000);
+   if(contador<0)
+        myTimeout =setTimeout(tiempoFinalizado,1000);
 }
 function tiempoFinalizado(){
-    clearInterval();
-    //cuentaAtras=0;
-    let texto=document.getElementById("contador");
-    texto.textContent=cuentaAtras;
+    clearInterval(myInterval);
+    let texto=document.getElementById("cuentaAtras");
+    texto.textContent=0;
     let sonido=document.getElementById("audioFinal");
     sonido.play();
     alert("Game Over: Se acabó el tiempo. Vuelve a intentarlo");
 }
 function finalizado(){
-    clearTimeout();
-    clearInterval();
+    clearTimeout(myTimeout);
+    clearInterval(myInterval);
     let fecha=new Date().toDateString();
-    let respuesta1=getElementById(respuesta1).value;
-    let respuesta2=getElementById(respuesta2).value;
-    let respuesta3=getElementById(respuesta3).value;
-    let respuesta4=getElementById(respuesta4).value;
-    let respuesta5=getElementById(respuesta5).value;
+    let respuesta1=document.getElementById("respuesta1").value;
+    let respuesta2=document.getElementById("respuesta2").value;
+    let respuesta3=document.getElementById("respuesta3").value;
+    let respuesta4=document.getElementById("respuesta4").value;
+    let respuesta5=document.getElementById("respuesta5").value;
     alert (fecha + respuesta1 + respuesta2 +respuesta3 +respuesta4+respuesta5);
 }
 function volverAJugar(){
