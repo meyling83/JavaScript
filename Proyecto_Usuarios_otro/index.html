@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Cell-Land</title>
+    <link rel="stylesheet" type="text/css" href="misEstilos.css">
+    <script src="misScripts.js"></script>
+</head>
+<body onload="obtenerTodos()">
+    <h1>Lista Usuarios</h1>
+    
+    <hr class="linea"/>
+    <div>
+        <h2>Administración de usuarios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Localidad</th>
+                    
+                </tr>
+            </thead>    
+            <tbody id="tblContenido">
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div>
+            <h4>Consultar usuario</h4>
+            <input type="number" id="txtConsulta" placeholder="Ingrese su ID">
+            <button onclick="consultarUno()">Consultar</button><br/><br/>
+        </div>
+        <div>
+            <label for="consultaNombre">Nombre:</label>
+            <textarea id="consultaNombre" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaEdad">Edad:</label>
+            <textarea id="consultaEdad" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaLocalidad">Localidad:</label>
+            <textarea id="consultaLocalidad" rows="1" cols="30"></textarea>
+        </div>
+        <br/>
+        <button onclick="modificarUno()">Modificar</button>
+        <button onclick="eliminarUno()">Eliminar</button>
+    </div>
+    <div>
+        <div>
+            <h4>Agregar usuario</h4>
+            <input type="text" id="inputNombre" placeholder="Nombre">
+            <input type="text" id="inputEdad" placeholder="Edad">
+            <input type="text" id="inputLocalidad" placeholder="Localidad">
+            <br/><br/>
+            <button onclick="agregarUno()">Agregar Nuevo</button>
+        </div>
+    </div>
+</body>
+</html>
