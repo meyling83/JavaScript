@@ -82,10 +82,10 @@ bloque.addEventListener("mouseout",cambiaColor);
 function cambiaColor(e){
     switch (e.type){
         case "mouseover":
-            bloque.style.background="ligthblue";
+            bloque.style.background="blue";
             break;
         case "mouseout":
-            bloque.style.background="yelow";
+            bloque.style.background="yellow";
             break;
         default:
             console.log("error");
