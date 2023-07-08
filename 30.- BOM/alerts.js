@@ -15,7 +15,16 @@
 	Devuelve verdadero o falso dependiendo de la respuesta del usuario.
 */
 
-
+const ingresar=()=>{
+	const accesopermitido=confirm("Eres mayor de edad");
+	if(accesopermitido){
+		alert("Bienvenido");
+	}
+	else{
+		alert("No puedes acceder");
+	}
+};
+document.getElementById("btnAceptar").addEventListener("click",ingresar);
 
 
 
@@ -25,4 +34,9 @@
 	Una ventana donde el usuario puede introducir un valor
 	Retorna una cadena de texto con la respuesta del usuario.
 */
+const saludo=()=>{
+	const nombre=prompt("Escribe tu nombre");
+	alert(`Bienvenido ${nombre}`);
+}
+document.getElementById("btnSaludo").addEventListener("click",saludo);
 
